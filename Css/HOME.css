@@ -10,7 +10,11 @@ body {
     height: auto;
     width: auto;
     text-align: center;
-  
+  padding-top: 70px;
+  .img{
+    width: 80%;
+    min-width: 320px;
+  }
   }
   
   nav {
@@ -77,4 +81,92 @@ body {
         height: 100px;
         margin: 10px;
         transition: transform .2s; }
+
+        @media screen and (min-width: 320px){
+
+          body {
+            background-color: rgba(0, 0, 0, 0.87);
+            text-align: center;
+            background-image: url(/images/Back3.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center; 
+          width: 320px;
+          }
+          
+          header {
+            height: auto;
+            width: 320px;
+            text-align: center;
+          
+          }
+          
+          nav {
+            background-color: rgba(0, 0, 0, 0.301);
+            text-align: center;
+            padding-top: 14px;
+            padding-bottom: 14px;
+            margin: auto;
+            display: flex;
+            flex: center;
+            justify-content: center; 
+            width: 320px;
+          }
+            nav .a {
+              text-decoration: none;
+              font-size: 20px;
+              padding-left: 20px;
+              padding-right: 20px;
+             
+              }
+            nav .zoom-box {
+              width: auto;
+              height: 100px;
+              margin: 10px;
+              transition: transform .2s;
+              }
+            nav a:hover {
+              transform: scale(1.5); }
+          
+          h1 {
+            font-size: 84px;
+            color: blanchedalmond;
+            font-family: 'Times New Roman', Times, serif; }
+          
+          h2 {
+            font-size: 42px;
+            color: aliceblue; }
+          
+          p {
+            font-size: 25px;
+            color: blanchedalmond;
+            font-family: 'Times New Roman', Times, serif; }
+          
+          iframe {
+            display: grid;
+            grid-area: 2rem;
+            text-align: center;
+            justify-content: center;
+            margin: auto;
+            padding: auto;
+            grid: center; }
+          
+          footer {
+            background-color: rgba(0, 0, 0, 0.685);
+            height: 100px;
+          width: 320px;
+          }
+            footer  p {
+              text-align: center;
+              padding-bottom: 25px;
+              padding-top: 25px;
+              font-family: 'Times New Roman', Times, serif; }
+              footer  p:hover {
+                transform: scale(1.5); }
+              footer  p .zoom-box {
+                width: auto;
+                height: 100px;
+                margin: 10px;
+                transition: transform .2s; }
+        }
   

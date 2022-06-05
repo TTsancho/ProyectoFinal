@@ -18,7 +18,7 @@ nav {
     background-color: rgba(0, 0, 0, 0.301);
     text-align: center;
     padding-top: 14px;
-    padding-bottom: 14px;
+    padding-bottom: 50px;
     margin: auto;
     display: flex;
     flex: center;
@@ -40,9 +40,9 @@ nav {
       transform: scale(1.5); }
 
 main {
-    height: 400px;
+    height: 600px;
     width: auto;
-   padding: auto;
+   padding-top: 50px;
     text-align: center;
     color: rgb(255, 255, 255);
 padding-left: 300px;

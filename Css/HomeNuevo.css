@@ -1,12 +1,87 @@
-
+body {
+  background-color: rgba(0, 0, 0, 0.87);
+  text-align: center;
+  background-image: url(/images/Back3.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; }
 
 header {
   height: auto;
   width: auto;
-  text-align: center; }
+  text-align: center;
 
-h1.titulo {
+}
+nav {
+  height: 100px;
+}
+
+main {
+  padding-top: 90px;
+}
+
+ul{
+  display: none;
+}
+
+input:checked  ~ ul{
+  display:block;
+}
+
+input {
+  display: none;
+}
+
+label {
+  box-sizing: border-box;
+  display: inline-block;
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  font-weight: bold;
+  text-align: center;
+  user-select: none;
+  color: aliceblue;
+}
+
+/* Estilo del boton cuando se pasa el mouse por encima*/
+label:hover{
+  background: grey;
+}
+
+/* Estilo del boton cuando el menú está expandido*/
+input:checked ~ label {
+  background: lightgrey; 
+}
+
+ul{
+  margin-top:0;
+  padding: 0;
+  width: 200px;
+
+}
+
+
+a {
+  display: block;
+  background: rgb(137, 136, 167);
+  margin: 0;
+  padding: 10px;
+  list-style: none;
+  border-bottom: 1px solid rgb(0, 0, 0);
+}
+
+/*Estilo cuando el mouse pasa encima de cada link del menu*/
+li:hover {
+  filter: brightness(110%);
+}
+
+
+h1 {
   font-size: 84px;
+  color: blanchedalmond;
   font-family: 'Times New Roman', Times, serif; }
 
 h2 {
@@ -27,86 +102,297 @@ iframe {
   padding: auto;
   grid: center; }
 
-* {
-  box-sizing: border-box;
-  text-align: center;
-  justify-content: center; }
-
-nav {
-  padding-left: 20px;
-  padding-right: 20 px; }
-
-nav {
-  background-color: rgba(0, 0, 0, 0.685); }
-
-nav p {
-  text-decoration: white; }
-
-.nav {
-  background-color: rgba(0, 0, 0, 0.685); }
-
-h1.titulo {
-  text-transform: uppercase;
-  display: inline-block;
-  color: white;
-  border: 1px solid rgba(255, 255, 255, 0); }
-
-.body, header {
-  display: flex;
-  justify-content: center;
-  align-items: center; }
-
-body {
-  background-color: rgba(0, 0, 0, 0.87);
-  text-align: center;
-  background-image: url(/images/Back3.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center; }
-  body a {
-    text-decoration: white;
-    font-size: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
-    font-family: 'Times New Roman', Times, serif; }
-
-nav {
-  background-color: rgba(0, 0, 0, 0.301);
-  text-align: center;
-  padding-top: 14px;
-  padding-bottom: 14px;
-  margin: auto;
-  display: flex;
-  flex: center;
-  justify-content: center;
-  height: 100px; }
-  nav a {
-    text-decoration: white;
-    font-size: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
-    font-family: 'Times New Roman', Times, serif; }
-    nav a .zoom-box {
-      width: auto;
-      height: 100px;
-      margin: 10px;
-      transition: transform .5s;
-      /* Animation */ }
-    nav a:hover {
-      transform: scale(1.5); }
-
 footer {
   background-color: rgba(0, 0, 0, 0.685);
   height: 100px; }
-  footer p {
+  footer  p {
     text-align: center;
-    padding-bottom: auto;
-    padding-top: 20px;
+    padding-bottom: 25px;
+    padding-top: 25px;
     font-family: 'Times New Roman', Times, serif; }
-    footer p:hover {
+    footer  p:hover {
       transform: scale(1.5); }
-    footer p .zoom-box {
+    footer  p .zoom-box {
       width: auto;
       height: 100px;
       margin: 10px;
       transition: transform .2s; }
+
+      @media screen and (min-width: 320px){
+
+        body {
+          background-color: rgba(0, 0, 0, 0.87);
+          text-align: center;
+          background-image: url(/images/Back3.jpg);
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center; 
+        width: 320px;
+        display: inline-block;
+        margin: 0 0.5rem;
+      
+        animation: bounce; /* referring directly to the animation's @keyframe declaration */
+        animation-duration: 2s; /* don't forget to set a duration! */
+        }
+        
+        header {
+          height: 200px;
+          width: 320px;
+          text-align: center;
+        
+        }
+        header img {width: 320px;}
+        nav {
+          background-color: rgba(0, 0, 0, 0.301);
+          text-align: center;
+          padding-top: 14px;
+          padding-bottom: 14px;
+          margin: auto;
+          display: flex;
+          flex: center;
+          justify-content: center; 
+          width: 200px;
+          height: 200px;
+        }
+          nav .a {
+            text-decoration: none;
+            font-size: 15px;
+            padding-left: 10px;
+            padding-right: 10px;
+           
+            }
+          nav .zoom-box {
+            width: auto;
+            height: 100px;
+            margin: 10px;
+            transition: transform .2s;
+            }
+          nav a:hover {
+            transform: scale(1.5); }
+        
+        h1 {
+          font-size: 84px;
+          color: blanchedalmond;
+          font-family: 'Times New Roman', Times, serif; }
+        
+        h2 {
+          font-size: 42px;
+          color: aliceblue; }
+        
+        p {
+          font-size: 25px;
+          color: blanchedalmond;
+          font-family: 'Times New Roman', Times, serif; }
+        
+        iframe {
+          display: grid;
+          grid-area: 2rem;
+          text-align: center;
+          justify-content: center;
+          margin: auto;
+          padding: auto;
+          grid: center; 
+        max-width: 320px;
+        }
+        
+        footer {
+          background-color: rgba(0, 0, 0, 0.685);
+          height: 200px;
+        width: 320px;
+        }
+          footer  p {
+            text-align: center;
+            padding-bottom: 25px;
+            padding-top: 25px;
+            font-family: 'Times New Roman', Times, serif; }
+            footer  p:hover {
+              transform: scale(1.5); }
+            footer  p .zoom-box {
+              width: auto;
+              height: 100px;
+              margin: 10px;
+              transition: transform .2s; }
+      }
+
+      @media screen and (min-width: 768px){
+
+        body {
+          background-color: rgba(0, 0, 0, 0.87);
+          text-align: center;
+          background-image: url(/images/Back3.jpg);
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center; 
+        width: 768px;
+        }
+        
+        header {
+          height: 200px;
+          width: 768px;
+          text-align: center;
+        padding-bottom: 500px;
+        }
+        header img {width: 768px;}
+        nav {
+          background-color: rgba(0, 0, 0, 0.301);
+          text-align: center;
+          padding-top: 50px;
+          padding-bottom: 14px;
+          margin: auto;
+          display: flex;
+          flex: center;
+          justify-content: center; 
+          width: 768px;
+          height: 200px;
+        }
+     
+        h1 {
+          font-size: 84px;
+          color: blanchedalmond;
+          font-family: 'Times New Roman', Times, serif; }
+        
+        h2 {
+          font-size: 42px;
+          color: aliceblue; }
+        
+        p {
+          font-size: 25px;
+          color: blanchedalmond;
+          font-family: 'Times New Roman', Times, serif; }
+        
+        iframe {
+          display: grid;
+          grid-area: 2rem;
+          text-align: center;
+          justify-content: center;
+          margin: auto;
+          padding: auto;
+          grid: center; 
+        max-width: 768px;
+        }
+        
+        footer {
+          background-color: rgba(0, 0, 0, 0.685);
+          height: 200px;
+        width: 768px;
+        }
+          footer  p {
+            text-align: center;
+            padding-bottom: 25px;
+            padding-top: 25px;
+            font-family: 'Times New Roman', Times, serif; }
+            footer  p:hover {
+              transform: scale(1.5); }
+            footer  p .zoom-box {
+              width: auto;
+              height: 100px;
+              margin: 10px;
+              transition: transform .2s; }
+    
+    
+label {
+  box-sizing: border-box;
+  display: inline-block;
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 80px;
+  height: 70px;
+  line-height: 30px;
+  font-weight: bold;
+  text-align: center;
+  user-select: none;
+  color: aliceblue;
+}
+
+ }
+
+ @media screen and (min-width: 1024px){
+
+  body {
+    background-color: rgba(0, 0, 0, 0.87);
+    text-align: center;
+    background-image: url(/images/Back3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; 
+  width: 1024px;
+  }
+  
+  header {
+    height: 200px;
+    width: 1024px;
+    text-align: center;
+  padding-bottom: 500px;
+  }
+  header img {width: 768px;}
+  nav {
+    background-color: rgba(0, 0, 0, 0.301);
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 14px;
+    margin: auto;
+    display: flex;
+    flex: center;
+    justify-content: center; 
+    width: 1024px;
+    height: 200px;
+  }
+
+  h1 {
+    font-size: 84px;
+    color: blanchedalmond;
+    font-family: 'Times New Roman', Times, serif; }
+  
+  h2 {
+    font-size: 42px;
+    color: aliceblue; }
+  
+  p {
+    font-size: 25px;
+    color: blanchedalmond;
+    font-family: 'Times New Roman', Times, serif; }
+  
+  iframe {
+    display: grid;
+    grid-area: 2rem;
+    text-align: center;
+    justify-content: center;
+    margin: auto;
+    padding: auto;
+    grid: center; 
+  max-width: 1024px;
+  }
+  
+  footer {
+    background-color: rgba(0, 0, 0, 0.685);
+    height: 200px;
+  width: 1024px;
+  }
+    footer  p {
+      text-align: center;
+      padding-bottom: 25px;
+      padding-top: 25px;
+      font-family: 'Times New Roman', Times, serif; }
+      footer  p:hover {
+        transform: scale(1.5); }
+      footer  p .zoom-box {
+        width: auto;
+        height: 100px;
+        margin: 10px;
+        transition: transform .2s; }
+
+
+label {
+box-sizing: border-box;
+display: inline-block;
+border: 1px solid black;
+border-radius: 5px;
+width: 80px;
+height: 70px;
+line-height: 30px;
+font-weight: bold;
+text-align: center;
+user-select: none;
+color: aliceblue;
+}
+}
